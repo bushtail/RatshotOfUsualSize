@@ -11,9 +11,9 @@ public record AmmoBox_57x28 : NewItemFromCloneDetails
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammobox_45acp_ratshot.bundle"
+            Path = "pdw/ammobox_57x28_ratshot.bundle"
         },
-        Name = "ammo_box_45acp_xx_rat",
+        Name = "ammo_box_57x28_xx_rat",
         StackMaxRandom = 10,
         StackMaxSize = 1,
         StackMinRandom = 10,
@@ -22,9 +22,9 @@ public record AmmoBox_57x28 : NewItemFromCloneDetails
         [
             new StackSlot
             {
-                Id = "694069f818ee56f9490e1e61",
+                Id = "",
                 Name = "cartridges",
-                Parent = ModItemTpl.AMMOBOX_45ACP.ToString(),
+                Parent = ModItemTpl.AMMOBOX_57X28.ToString(),
                 MaxCount = 10,
                 Properties = new StackSlotProperties
                 {
@@ -34,7 +34,7 @@ public record AmmoBox_57x28 : NewItemFromCloneDetails
                         {
                             Filter = 
                             [
-                                ModItemTpl.AMMO_45ACP
+                                ModItemTpl.AMMO_57X28
                             ]
                         }
                     ]

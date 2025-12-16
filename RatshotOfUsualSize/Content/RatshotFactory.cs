@@ -10,10 +10,13 @@ public static class RatshotFactory
         [
             new Ammo_9x33R(),
             new AmmoBox_9x33R(),
+            
             new Ammo_50AE(),
             new AmmoBox_50AE(),
+            
             new Ammo_366TKM(),
             new AmmoBox_366TKM(),
+            
             new Ammo_338LM(),
             new AmmoBox_338LM()
         ];

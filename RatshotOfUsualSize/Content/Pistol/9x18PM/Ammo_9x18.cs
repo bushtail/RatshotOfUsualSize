@@ -12,9 +12,9 @@ public record Ammo_9x18 : NewItemFromCloneDetails
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammo_45acp_ratshot.bundle"
+            Path = "pistol/ammo_9x18_ratshot.bundle"
         },
-        Name = "ammo_45acp_xx_rat",
+        Name = "ammo_9x18_xx_rat",
         Damage = 10,
         ProjectileCount = 10,
         BuckshotBullets = 10,
@@ -39,7 +39,8 @@ public record Ammo_9x18 : NewItemFromCloneDetails
     public override string HandbookParentId { get; set; } = ParentID.AMMO_HANDBOOK.ToString();
     public override Dictionary<string, LocaleDetails>? Locales { get; set; } = new()
     {
-        { "en", 
+        { 
+            "en", 
             new LocaleDetails
             {
                 Name = "",

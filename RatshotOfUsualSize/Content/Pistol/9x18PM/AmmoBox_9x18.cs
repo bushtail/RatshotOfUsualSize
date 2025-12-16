@@ -11,9 +11,9 @@ public record AmmoBox_9x18 : NewItemFromCloneDetails
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammobox_45acp_ratshot.bundle"
+            Path = "pistol/ammobox_9x18_ratshot.bundle"
         },
-        Name = "ammo_box_45acp_xx_rat",
+        Name = "ammo_box_9x18_xx_rat",
         StackMaxRandom = 10,
         StackMaxSize = 1,
         StackMinRandom = 10,
@@ -22,9 +22,9 @@ public record AmmoBox_9x18 : NewItemFromCloneDetails
         [
             new StackSlot
             {
-                Id = "694069f818ee56f9490e1e61",
+                Id = "",
                 Name = "cartridges",
-                Parent = ModItemTpl.AMMOBOX_45ACP.ToString(),
+                Parent = ModItemTpl.AMMOBOX_9X18PM.ToString(),
                 MaxCount = 10,
                 Properties = new StackSlotProperties
                 {
@@ -34,7 +34,7 @@ public record AmmoBox_9x18 : NewItemFromCloneDetails
                         {
                             Filter = 
                             [
-                                ModItemTpl.AMMO_45ACP
+                                ModItemTpl.AMMO_9X18PM
                             ]
                         }
                     ]
@@ -50,7 +50,8 @@ public record AmmoBox_9x18 : NewItemFromCloneDetails
     public override string HandbookParentId { get; set; } = ParentID.AMMOBOX_HANDBOOK.ToString();
         public override Dictionary<string, LocaleDetails>? Locales { get; set; } = new()
     {
-        { "en", 
+        { 
+            "en", 
             new LocaleDetails
             {
                 Name = "",

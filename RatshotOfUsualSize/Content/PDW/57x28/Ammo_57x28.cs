@@ -12,9 +12,9 @@ public record Ammo_57x28 : NewItemFromCloneDetails
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammo_45acp_ratshot.bundle"
+            Path = "pdw/ammo_57x28_ratshot.bundle"
         },
-        Name = "ammo_45acp_xx_rat",
+        Name = "ammo_57x28_xx_rat",
         Damage = 10,
         ProjectileCount = 10,
         BuckshotBullets = 10,

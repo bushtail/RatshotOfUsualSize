@@ -11,9 +11,9 @@ public record Ammo_9x33R : NewItemFromCloneDetails
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammo_45acp_ratshot.bundle"
+            Path = "pistol/ammo_9x33r_ratshot.bundle"
         },
-        Name = "ammo_45acp_xx_rat",
+        Name = "ammo_9x33r_xx_rat",
         Damage = 10,
         ProjectileCount = 10,
         BuckshotBullets = 10,
@@ -32,18 +32,17 @@ public record Ammo_9x33R : NewItemFromCloneDetails
         StackMaxSize = 50
     };
     public override string ParentId { get; set; } = ParentID.AMMO.ToString();
-    public override string NewId { get; set; }
+    public override string NewId { get; set; } = ModItemTpl.AMMO_9X33R.ToString();
     public override double? FleaPriceRoubles { get; set; }
     public override double? HandbookPriceRoubles { get; set; }
     public override string HandbookParentId { get; set; } = ParentID.AMMO_HANDBOOK.ToString();
-        public override Dictionary<string, LocaleDetails>? Locales { get; set; } = new()
+    public override Dictionary<string, LocaleDetails>? Locales { get; set; } = new()
     {
-        { "en", 
+        {
+            "en",
             new LocaleDetails
             {
-                Name = "",
-                ShortName = "",
-                Description = ""
+                
             }
         }
     };

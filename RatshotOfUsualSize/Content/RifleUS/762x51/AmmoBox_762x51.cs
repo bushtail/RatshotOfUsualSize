@@ -7,13 +7,13 @@ namespace RatshotOfUsualSize;
 public record AmmoBox_762x51 : NewItemFromCloneDetails
 {
     public override MongoId? ItemTplToClone { get; set; } = ItemTpl.AMMOBOX_762X51_BCP_FMJ_20RND;
-    public override TemplateItemProperties OverrideProperties { get; set; } = new()
+    public override TemplateItemProperties? OverrideProperties { get; set; } = new()
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammobox_45acp_ratshot.bundle"
+            Path = "rifle_us/ammobox_762x51_ratshot.bundle"
         },
-        Name = "ammo_box_45acp_xx_rat",
+        Name = "ammo_box_762x51_xx_rat",
         StackMaxRandom = 10,
         StackMaxSize = 1,
         StackMinRandom = 10,
@@ -22,9 +22,9 @@ public record AmmoBox_762x51 : NewItemFromCloneDetails
         [
             new StackSlot
             {
-                Id = "694069f818ee56f9490e1e61",
+                Id = "",
                 Name = "cartridges",
-                Parent = ModItemTpl.AMMOBOX_45ACP.ToString(),
+                Parent = ModItemTpl.AMMOBOX_762X51.ToString(),
                 MaxCount = 10,
                 Properties = new StackSlotProperties
                 {
@@ -34,7 +34,7 @@ public record AmmoBox_762x51 : NewItemFromCloneDetails
                         {
                             Filter = 
                             [
-                                ModItemTpl.AMMO_45ACP
+                                ModItemTpl.AMMO_762X51
                             ]
                         }
                     ]
@@ -44,7 +44,7 @@ public record AmmoBox_762x51 : NewItemFromCloneDetails
         ]
     };
     public override string ParentId { get; set; } = ParentID.AMMOBOX.ToString();
-    public override string NewId { get; set; } = "";
+    public override string NewId { get; set; } = ModItemTpl.AMMOBOX_762X51.ToString();
     public override double? FleaPriceRoubles { get; set; }
     public override double? HandbookPriceRoubles { get; set; }
     public override string HandbookParentId { get; set; }  = ParentID.AMMOBOX_HANDBOOK.ToString();

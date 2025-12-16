@@ -13,6 +13,7 @@ public static class ModItemTpl
     // Pistol
     public static readonly MongoId AMMO_9X18PM = new("693c34131de62b712e056e6a");
     public static readonly MongoId AMMOBOX_9X18PM = new("693c34131de62b712e056e6b");
+    
     public static readonly MongoId AMMO_9X19 = new("693c34131de62b712e056e6c");
     public static readonly MongoId AMMOBOX_9X19 = new("693c34131de62b712e056e6d");
     public static readonly MongoId AMMO_9X21 = new("693c34131de62b712e056e6e");
@@ -40,7 +41,7 @@ public static class ModItemTpl
     public static readonly MongoId AMMO_762X39 = new("693c344e1de62b712e056e86");
     public static readonly MongoId AMMOBOX_762X39 = new("693c344e1de62b712e056e87");
     public static readonly MongoId AMMO_762X54R = new("693c344e1de62b712e056e88");
-    public static readonly MongoId AMMOBOX_764X54R = new("693c344e1de62b712e056e89");
+    public static readonly MongoId AMMOBOX_762X54R = new("693c344e1de62b712e056e89");
     
     // Rifle (US)
     public static readonly MongoId AMMO_68X51 = new("693c347b1de62b712e056e8a");
@@ -50,5 +51,7 @@ public static class ModItemTpl
     public static readonly MongoId AMMO_338LM = new("693c347b1de62b712e056e8e");
     public static readonly MongoId AMMOBOX_338LM = new("693c347b1de62b712e056e8f");
     public static readonly MongoId AMMO_556X45 = new("693c347b1de62b712e056e90");
+    public static readonly MongoId AMMOBOX_556X45 = new("6941a40b787395b8cc0ab162");
+    public static readonly MongoId AMMO_762X51 = new("6941a40f787395b8cc0ab163");
     public static readonly MongoId AMMOBOX_762X51 = new("693c347b1de62b712e056e91");
 }

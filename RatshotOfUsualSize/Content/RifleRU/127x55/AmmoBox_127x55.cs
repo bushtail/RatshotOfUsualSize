@@ -11,9 +11,9 @@ public record AmmoBox_127x55 : NewItemFromCloneDetails
     {
         Prefab = new Prefab
         {
-            Path = "pistol/ammobox_45acp_ratshot.bundle"
+            Path = "rifle_ru/ammobox_127x55_ratshot.bundle"
         },
-        Name = "ammo_box_45acp_xx_rat",
+        Name = "ammo_box_127x55_xx_rat",
         StackMaxRandom = 10,
         StackMaxSize = 1,
         StackMinRandom = 10,
@@ -22,9 +22,9 @@ public record AmmoBox_127x55 : NewItemFromCloneDetails
         [
             new StackSlot
             {
-                Id = "694069f818ee56f9490e1e61",
+                Id = "",
                 Name = "cartridges",
-                Parent = ModItemTpl.AMMOBOX_45ACP.ToString(),
+                Parent = ModItemTpl.AMMOBOX_127X55.ToString(),
                 MaxCount = 10,
                 Properties = new StackSlotProperties
                 {
@@ -34,7 +34,7 @@ public record AmmoBox_127x55 : NewItemFromCloneDetails
                         {
                             Filter = 
                             [
-                                ModItemTpl.AMMO_45ACP
+                                ModItemTpl.AMMO_127X55
                             ]
                         }
                     ]
@@ -44,7 +44,7 @@ public record AmmoBox_127x55 : NewItemFromCloneDetails
         ]
     };
     public override string ParentId { get; set; } = ParentID.AMMOBOX.ToString();
-    public override string NewId { get; set; }
+    public override string NewId { get; set; } = ModItemTpl.AMMOBOX_127X55.ToString();
     public override double? FleaPriceRoubles { get; set; }
     public override double? HandbookPriceRoubles { get; set; }
     public override string HandbookParentId { get; set; } = ParentID.AMMOBOX_HANDBOOK.ToString();
