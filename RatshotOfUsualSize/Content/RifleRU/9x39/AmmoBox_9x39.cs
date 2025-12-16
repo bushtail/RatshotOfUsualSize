@@ -22,7 +22,7 @@ public record AmmoBox_9x39 : NewItemFromCloneDetails
         [
             new StackSlot
             {
-                Id = "",
+                Id = "6941a4cd787395b8cc0ab16f",
                 Name = "cartridges",
                 Parent = ModItemTpl.AMMOBOX_9X39.ToString(),
                 MaxCount = 10,
