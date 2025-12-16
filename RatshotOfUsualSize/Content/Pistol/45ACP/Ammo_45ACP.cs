@@ -34,8 +34,8 @@ public record Ammo_45ACP : NewItemFromCloneDetails
     };
     public override string? ParentId { get; set; } = ParentID.AMMO.ToString();
     public override string? NewId { get; set; } = ModItemTpl.AMMO_45ACP.ToString();
-    public override double? FleaPriceRoubles { get; set; } = 40;
-    public override double? HandbookPriceRoubles { get; set; } = 20;
+    public override double? FleaPriceRoubles { get; set; } = 69;
+    public override double? HandbookPriceRoubles { get; set; } = 69;
     public override string? HandbookParentId { get; set; } = ParentID.AMMO_HANDBOOK.ToString();
     public override Dictionary<string, LocaleDetails>? Locales { get; set; } = new()
     {

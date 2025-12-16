@@ -45,8 +45,8 @@ public record AmmoBox_338LM : NewItemFromCloneDetails
     };
     public override string ParentId { get; set; } = ParentID.AMMOBOX.ToString();
     public override string NewId { get; set; } = ModItemTpl.AMMOBOX_338LM.ToString();
-    public override double? FleaPriceRoubles { get; set; }
-    public override double? HandbookPriceRoubles { get; set; }
+    public override double? FleaPriceRoubles { get; set; } = 69;
+    public override double? HandbookPriceRoubles { get; set; } = 69;
     public override string HandbookParentId { get; set; } = ParentID.AMMOBOX_HANDBOOK.ToString();
         public override Dictionary<string, LocaleDetails>? Locales { get; set; } = new()
     {
