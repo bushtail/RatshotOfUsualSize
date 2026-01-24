@@ -31,7 +31,7 @@
             "en": {
                 "name": "5.45x39mm Shotshell",
                 "shortName": "Shotshell",
-                "description": "A 5.45x39mm Shotshell is a cartridge containing x small pellets designed for elimination of rodents where a full shotgun shell would be considered overkill. In a pinch, it can be used offensively as a deterrent for burglars or enemy combatants wondering why they were just stung by many angry lead hornets. Manufactured by ZharArms."
+                "description": "A 5.45x39mm Shotshell is a cartridge containing 45 small pellets designed for elimination of rodents where a full shotgun shell would be considered overkill. In a pinch, it can be used offensively as a deterrent for burglars or enemy combatants wondering why they were just stung by many angry lead hornets. Manufactured by ZharArms."
             }
         },
         "fleaPriceRoubles": 0,
@@ -118,9 +118,9 @@
         },
         "locales": {
             "en": {
-                "name": "5.45x39mm Shotshell ammo pack (x pcs)",
+                "name": "5.45x39mm Shotshell ammo pack (30 pcs)",
                 "shortName": "Shotshell",
-                "description": "A pack of 5.45x39mm Shotshell ammo, x rounds."
+                "description": "A pack of 5.45x39mm Shotshell ammo, 30 rounds."
             }
         },
         "fleaPriceRoubles": 0,
