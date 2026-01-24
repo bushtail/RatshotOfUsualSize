@@ -39,7 +39,7 @@
         "addtoInventorySlots": [],
         "addtoModSlots": false,
         "modSlot": null,
-        "addtoTraders": true,
+        "addtoTraders": false,
         "traders": {
             "REF": {
                 "694176e3546e6a2f4eba1f8f": {
@@ -128,7 +128,7 @@
         "addtoInventorySlots": [],
         "addtoModSlots": false,
         "modSlot": null,
-        "addtoTraders": true,
+        "addtoTraders": false,
         "traders": {
             "REF": {
                 "6941774883b8881300c83b7f": {
