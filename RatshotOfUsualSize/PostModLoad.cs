@@ -1,14 +1,17 @@
-﻿using JetBrains.Annotations;
+﻿using System.Reflection;
+using JetBrains.Annotations;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 
 namespace RatshotOfUsualSize;
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2), UsedImplicitly]
-public class PostModLoad : IOnLoad
+[Injectable(TypePriority = OnLoadOrder.TraderRegistration - 1), UsedImplicitly]
+public class PostModLoad(WTTServerCommonLib.WTTServerCommonLib wttServerCommonLib) : IOnLoad
 {
-    public Task OnLoad()
+    public async Task OnLoad()
     {
-        throw new NotImplementedException();
+        var assembly = Assembly.GetExecutingAssembly();
+        await wttServerCommonLib.CustomItemServiceExtended.CreateCustomItems(assembly);
+        await wttServerCommonLib.CustomAssortSchemeService.CreateCustomAssortSchemes(assembly);
     }
 }

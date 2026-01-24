@@ -1,0 +1,183 @@
+﻿{
+    "694176e3465970ee4d306c27": {
+        "itemTplToClone": "5a26abfac4a28232980eabff",
+        "parentId": "5485a8684bdc2da71d8b4567",
+        "handbookParentId": "5b47574386f77428ca22b33b",
+        "overrideProperties": {
+            "Prefab": {
+                "Path": "ammo_9x21_ratshot.bundle",
+                "Rcid": ""
+            },
+            "CanSellOnRagfair": false,
+            "Damage": 2.1,
+            "BuckshotBullets": 38,
+            "Weight": 0.115,
+            "AmmoAccr": -5,
+            "AmmoType": "buckshot",
+            "ammoRec": -10,
+            "RicochetChance": 0,
+            "AmmoTooltipClass": "SoftTargets",
+            "ArmorDamage": 1,
+            "BallisticCoeficient": 0.025,
+            "BulletDiameterMillimeters": 1,
+            "BulletMassGram": 0.01,
+            "PenetrationPower": 1,
+            "PenetrationChanceObstacle": 0.0,
+            "PenetrationDamageMod": 0.0,
+            "PenetrationPowerDiviation": 1,
+            "StaminaBurnPerDamage": 0.1
+        },
+        "locales": {
+            "en": {
+                "name": "9x21mm Shotshell",
+                "shortName": "Shotshell",
+                "description": "A 9x21mm Shotshell is a cartridge containing x small pellets designed for elimination of rodents where a full shotgun shell would be considered overkill. In a pinch, it can be used offensively as a deterrent for burglars or enemy combatants wondering why they were just stung by many angry lead hornets. Manufactured by ZharArms."
+            }
+        },
+        "fleaPriceRoubles": 0,
+        "handbookPriceRoubles": 0,
+        "addtoInventorySlots": [],
+        "addtoModSlots": false,
+        "modSlot": null,
+        "addtoTraders": true,
+        "traders": {
+            "REF": {
+                "694176e3465970ee4d306c27": {
+                    "barterSettings": {
+                        "loyalLevel": 1,
+                        "unlimitedCount": false,
+                        "stackObjectsCount": 1,
+                        "buyRestrictionMax": 3
+                    },
+                    "barters": [
+                        {
+                            "count": 1,
+                            "_tpl": "5d235b4d86f7742e017bc88a",
+                            "onlyFunctional": false,
+                            "sptQuestLocked": false
+                        }
+                    ]
+                }
+            }
+        },
+        "addtoBots": false,
+        "addtoStaticLootContainers": false,
+        "staticLootContainers": [
+            {
+                "containerName": "weapon_box",
+                "probability": 10
+            }
+        ],
+        "masteries": false,
+        "masterySections": null,
+        "addWeaponPreset": false,
+        "weaponPresets": null,
+        "addtoHallOfFame": false,
+        "hallOfFameSlots": null,
+        "addtoSpecialSlots": false,
+        "addtoGeneratorAsFuel": false,
+        "generatorFuelSlotStages": null,
+        "addtoHideoutPosterSlots": false,
+        "addPosterToMaps": false,
+        "posterSpawnProbability": null,
+        "addtoStatuetteSlots": false,
+        "addCaliberToAllCloneLocations": false,
+        "addtoStaticAmmo": false,
+        "staticAmmoProbability": null,
+        "addtoEmptyPropSlots": false,
+        "emptyPropSlot": null,
+        "addtoSecureFilters": false
+    },
+    "69417749945f34730bfcccda": {
+        "itemTplToClone": "657025bbcfc010a0f5006a35",
+        "parentId": "543be5cb4bdc2deb348b4568",
+        "handbookParentId": "5b47574386f77428ca22b33c",
+        "overrideProperties": {
+            "Prefab": {
+                "Path": "ammobox_9x21_ratshot.bundle",
+                "Rcid": ""
+            },
+            "StackSlots": [
+                {
+                    "_id": "69751894b3a15d587c0ae0b4",
+                    "_max_count": 50,
+                    "_name": "cartridges",
+                    "_parent": "69417749945f34730bfcccda",
+                    "_props": {
+                        "filters": [
+                            {
+                                "Filter": [
+                                    "694176e3465970ee4d306c27"
+                                ]
+                            }
+                        ]
+                    },
+                    "_proto": "5748538b2459770af276a261"
+                }
+            ]
+        },
+        "locales": {
+            "en": {
+                "name": "9x21mm Shotshell ammo pack (x pcs)",
+                "shortName": "Shotshell",
+                "description": "A pack of 9x21mm Shotshell ammo, x rounds."
+            }
+        },
+        "fleaPriceRoubles": 0,
+        "handbookPriceRoubles": 0,
+        "addtoInventorySlots": [],
+        "addtoModSlots": false,
+        "modSlot": null,
+        "addtoTraders": true,
+        "traders": {
+            "REF": {
+                "69417749945f34730bfcccda": {
+                    "barterSettings": {
+                        "loyalLevel": 1,
+                        "unlimitedCount": false,
+                        "stackObjectsCount": 1,
+                        "buyRestrictionMax": 3
+                    },
+                    "barters": [
+                        {
+                            "count": 1,
+                            "_tpl": "5d235b4d86f7742e017bc88a",
+                            "onlyFunctional": false,
+                            "sptQuestLocked": false
+                        }
+                    ]
+                }
+            }
+        },
+        "addtoBots": false,
+        "addtoStaticLootContainers": false,
+        "staticLootContainers": [
+            {
+                "containerName": "weapon_box",
+                "probability": 10
+            }
+        ],
+        "masteries": false,
+        "masterySections": null,
+        "addWeaponPreset": false,
+        "weaponPresets": null,
+        "addtoHallOfFame": false,
+        "hallOfFameSlots": null,
+        "addtoSpecialSlots": false,
+        "addtoGeneratorAsFuel": false,
+        "generatorFuelSlotStages": null,
+        "addtoHideoutPosterSlots": false,
+        "addPosterToMaps": false,
+        "posterSpawnProbability": null,
+        "addtoStatuetteSlots": false,
+        "addCaliberToAllCloneLocations": false,
+        "addtoStaticAmmo": false,
+        "staticAmmoProbability": null,
+        "addtoEmptyPropSlots": false,
+        "emptyPropSlot": null,
+        "addtoSecureFilters": false
+    }
+}
+
+
+
