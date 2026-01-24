@@ -10,6 +10,7 @@
             },
             "CanSellOnRagfair": false,
             "Damage": 2.1,
+            "ProjectileCount": 38,
             "BuckshotBullets": 38,
             "Weight": 0.115,
             "AmmoAccr": -5,
