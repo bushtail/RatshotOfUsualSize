@@ -29,7 +29,7 @@
         "locales": {
             "en": {
                 "name": "9x18mm PM Shotshell",
-                "shortName": "Shotshell",
+                "shortName": "9x18 Rat",
                 "description": "A 9x18mm PM Shotshell is a cartridge containing 30 small pellets designed for elimination of rodents where a full shotgun shell would be considered overkill. In a pinch, it can be used offensively as a deterrent for burglars or enemy combatants wondering why they were just stung by many angry lead hornets. Manufactured by ZharArms."
             }
         },
@@ -118,7 +118,7 @@
         "locales": {
             "en": {
                 "name": "9x18mm PM Shotshell ammo pack (50 pcs)",
-                "shortName": "Shotshell",
+                "shortName": "9x18 Rat",
                 "description": "A pack of 9x18mm Shotshell ammo, 50 rounds."
             }
         },

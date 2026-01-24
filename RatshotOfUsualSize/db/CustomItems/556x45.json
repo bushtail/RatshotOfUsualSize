@@ -30,7 +30,7 @@
         "locales": {
             "en": {
                 "name": "5.56x45mm Shotshell",
-                "shortName": "Shotshell",
+                "shortName": "5.56x45 Rat",
                 "description": "A 5.56x45mm Shotshell is a cartridge containing 40 small pellets designed for elimination of rodents where a full shotgun shell would be considered overkill. In a pinch, it can be used offensively as a deterrent for burglars or enemy combatants wondering why they were just stung by many angry lead hornets. Manufactured by ZharArms."
             }
         },
@@ -119,7 +119,7 @@
         "locales": {
             "en": {
                 "name": "5.56x45mm Shotshell ammo pack (30 pcs)",
-                "shortName": "Shotshell",
+                "shortName": "5.56x45 Rat",
                 "description": "A pack of 5.56x45mm Shotshell ammo, 30 rounds."
             }
         },
