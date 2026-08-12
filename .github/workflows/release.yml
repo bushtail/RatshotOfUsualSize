@@ -21,12 +21,12 @@ jobs:
       - name: Extract mod metadata
         id: extract
         run: |
-          # Extract init-only string properties
+          # Extract init-only string properties from ModMetadata implementation
           MODGUID=$(grep -rPho -h 'ModGuid\s*{\s*[^}]*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
           MOD_NAME=$(grep -rPho -h 'Name\s*{\s*[^}]*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
           AUTHOR=$(grep -rPho -h 'Author\s*{\s*[^}]*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
 
-          # Extract Version from csproj
+          # Version from csproj
           VERSION=$(grep -rPo '<Version>(.*?)</Version>' **/*.csproj | sed -E 's/.*>(.*)<.*/\1/' | head -n 1)
 
           echo "Extracted values:"
@@ -52,27 +52,49 @@ jobs:
 
       - name: Package mod folder
         run: |
+          # Find Release output directory
           OUTDIR=$(find . -type d -path "*/bin/Release*" | head -n 1)
           if [ -z "$OUTDIR" ]; then
             echo "No Release output folder found" && exit 1
           fi
 
-          # Find SP1_Runtime folder produced by the build
-          RUNTIME=$(find "$OUTDIR" -type d -name "SP1_Runtime" | head -n 1)
-          if [ -z "$RUNTIME" ]; then
-            echo "SP1_Runtime folder not found in build output" && exit 1
+          # Find inner build output folder (contains DLL)
+          INNER=$(find "$OUTDIR" -mindepth 1 -maxdepth 1 -type d | head -n 1)
+          if [ -z "$INNER" ]; then
+            echo "No inner build output folder found" && exit 1
           fi
 
           TARGET="package/SPT_Runtime/user/mods/$AUTHOR-$MOD_NAME"
           echo "Packaging mod into $TARGET"
-
           mkdir -p "$TARGET"
 
-          # Copy ONLY the required mod files
-          rsync -av "$RUNTIME/bundles/" "$TARGET/bundles/"
-          rsync -av "$RUNTIME/bundles.json" "$TARGET/"
-          rsync -av "$RUNTIME/db/" "$TARGET/db/"
-          rsync -av "$RUNTIME/"*.dll "$TARGET/"
+          # Copy DLL(s)
+          DLLS=$(find "$INNER" -maxdepth 1 -type f -name "*.dll")
+          if [ -z "$DLLS" ]; then
+            echo "No DLLs found in build output" && exit 1
+          fi
+          rsync -av $DLLS "$TARGET/"
+
+          # Copy ONLY contents of Resources/
+          RESOURCES_DIR=$(find . -maxdepth 2 -type d -name "Resources" | head -n 1)
+          if [ -z "$RESOURCES_DIR" ]; then
+            echo "Resources folder not found" && exit 1
+          fi
+
+          # db/
+          if [ -d "$RESOURCES_DIR/db" ]; then
+            rsync -av "$RESOURCES_DIR/db/" "$TARGET/db/"
+          fi
+
+          # bundles/
+          if [ -d "$RESOURCES_DIR/bundles" ]; then
+            rsync -av "$RESOURCES_DIR/bundles/" "$TARGET/bundles/"
+          fi
+
+          # bundles.json
+          if [ -f "$RESOURCES_DIR/bundles.json" ]; then
+            rsync -av "$RESOURCES_DIR/bundles.json" "$TARGET/"
+          fi
 
       - name: Zip mod folder
         run: |
@@ -102,7 +124,6 @@ jobs:
       - name: Extract tag name from zip
         run: |
           ZIPFILE=$(find mod_package -type f -name "*.zip" | head -n 1)
-
           if [ -z "$ZIPFILE" ]; then
             echo "No zip file found in mod_package" >&2
             exit 1
