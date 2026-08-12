@@ -11,7 +11,7 @@ public class RatshotOfUsualSize(WTTServerCommonLib.WTTServerCommonLib wtt) : IOn
 {
     private static readonly JsonSerializerOptions _options = new() { WriteIndented = true };
 
-    public async Task OnLoad()
+    public async Task OnLoadAsync(CancellationToken cancellationToken)
     {
         var assembly = Assembly.GetExecutingAssembly();
         await wtt.CustomItemServiceExtended.CreateCustomItems(assembly);
