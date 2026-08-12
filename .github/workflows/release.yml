@@ -22,9 +22,9 @@ jobs:
         id: extract
         run: |
           # Extract simple string init properties
-          MODGUID=$(grep -rPho -h 'ModGuid\s*{\s*init;\s*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
-          MOD_NAME=$(grep -rPho -h 'Name\s*{\s*init;\s*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
-          AUTHOR=$(grep -rPho -h 'Author\s*{\s*init;\s*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
+          MODGUID=$(grep -rPho -h 'ModGuid\s*{\s*[^}]*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
+          MOD_NAME=$(grep -rPho -h 'Name\s*{\s*[^}]*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
+          AUTHOR=$(grep -rPho -h 'Author\s*{\s*[^}]*}\s*=\s*"\K[^"]+' . --include \*.cs | head -n 1)
 
           # Extract Version from csproj (still authoritative)
           VERSION=$(grep -rPo '<Version>(.*?)</Version>' **/*.csproj | sed -E 's/.*>(.*)<.*/\1/' | head -n 1)
