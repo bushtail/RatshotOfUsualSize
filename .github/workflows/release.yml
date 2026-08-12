@@ -57,38 +57,22 @@ jobs:
             echo "No Release output folder found" && exit 1
           fi
 
-          INNER=$(find "$OUTDIR" -mindepth 1 -maxdepth 1 -type d | head -n 1)
-          TARGET="package/SPT_Runtime/user/mods/$AUTHOR-$MOD_NAME"
+          # Find SP1_Runtime folder produced by the build
+          RUNTIME=$(find "$OUTDIR" -type d -name "SP1_Runtime" | head -n 1)
+          if [ -z "$RUNTIME" ]; then
+            echo "SP1_Runtime folder not found in build output" && exit 1
+          fi
 
+          TARGET="package/SPT_Runtime/user/mods/$AUTHOR-$MOD_NAME"
           echo "Packaging mod into $TARGET"
+
           mkdir -p "$TARGET"
 
-          rsync -av \
-            --exclude "*$MOD_NAME.deps.json" \
-            --exclude "*$MOD_NAME.pdb" \
-            --exclude "*$MOD_NAME.staticwebassets.endpoints.json" \
-            "$INNER"/ "$TARGET/"
-
-          # Updated: Resources folder
-          RESOURCES=$(find . -type d -name "Resources" | head -n 1)
-          if [ -n "$RESOURCES" ]; then
-            echo "Found Resources/, adding bundles/, bundles.json, db/"
-          
-            # bundles/
-            if [ -d "$RESOURCES/bundles" ]; then
-              rsync -av "$RESOURCES/bundles/" "$TARGET/bundles/"
-            fi
-
-            # bundles.json
-            if [ -f "$RESOURCES/bundles.json" ]; then
-              rsync -av "$RESOURCES/bundles.json" "$TARGET/"
-            fi
-
-            # db/
-            if [ -d "$RESOURCES/db" ]; then
-              rsync -av "$RESOURCES/db/" "$TARGET/db/"
-            fi
-          fi
+          # Copy ONLY the required mod files
+          rsync -av "$RUNTIME/bundles/" "$TARGET/bundles/"
+          rsync -av "$RUNTIME/bundles.json" "$TARGET/"
+          rsync -av "$RUNTIME/db/" "$TARGET/db/"
+          rsync -av "$RUNTIME/"*.dll "$TARGET/"
 
       - name: Zip mod folder
         run: |
