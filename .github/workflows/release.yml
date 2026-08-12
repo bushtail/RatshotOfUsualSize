@@ -97,7 +97,7 @@ jobs:
           zip -r "${AUTHOR}-${MOD_NAME}_v${VERSION}.zip" SPT
 
       - name: Upload zipped mod
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: mod_package
           path: package/${{ env.AUTHOR }}-${{ env.MOD_NAME }}_v${{ env.VERSION }}.zip
@@ -107,10 +107,10 @@ jobs:
     needs: build
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Download mod artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
 
       - name: Extract tag name from zip
         run: |
@@ -120,7 +120,7 @@ jobs:
           echo "TAGNAME=v$TAGNAME" >> $GITHUB_ENV
 
       - name: Publish release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: mod_package/*.zip
           tag_name: "${{ env.TAGNAME }}"
